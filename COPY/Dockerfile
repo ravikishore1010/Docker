@@ -5,5 +5,5 @@ CMD ["nginx", "-g", "daemon off;"]
 LABEL NAME="RAVIKISHORE"\
       COURSE="DOCKER"\
       DURATION="25HOURS"
-COPY website /usr/share/nginx/html/
+COPY /usr/share/nginx/html/
 EXPOSE 8080
