@@ -16,7 +16,7 @@ CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
 
 # Download Apache HTTP Server
-ADD https://www.apache.org/dist/httpd/httpd-2.4.51.tar.gz /tmp/
+ADD https://httpd.apache.org/download.cgi#apache24 /tmp/
 
 # Download a sample Dockerfile from a GitHub repository
 ADD https://raw.githubusercontent.com/techworldwithsiva/dockerfiles/master/ADD/Dockerfile /tmp/
