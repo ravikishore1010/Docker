@@ -1,6 +1,6 @@
 
 # Use an official AlmaLinux base image
-FROM almalinux:8
+FROM almalinux:latest
 
 # Install Nginx using dnf
 RUN dnf install -y nginx
