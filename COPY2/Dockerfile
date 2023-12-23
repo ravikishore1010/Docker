@@ -1,6 +1,8 @@
 
 # Use an official AlmaLinux base image
 FROM almalinux:8
+ENV APP_HOME=/app
+WORKDIR ${APP_HOME}
 
 # Install Nginx using dnf
 RUN yum install -y nginx
@@ -16,7 +18,11 @@ CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
 
 # Download Apache HTTP Server
-ADD https://httpd.apache.org/download.cgi#apache24 /tmp/
+ADD https://httpd.apache.org/download.cgi#apache24 ./
 
 # Download a sample Dockerfile from a GitHub repository
-ADD https://raw.githubusercontent.com/techworldwithsiva/dockerfiles/master/ADD/Dockerfile /tmp/
+ADD https://raw.githubusercontent.com/techworldwithsiva/dockerfiles/master/ADD/Dockerfile ./
+
+LABEL COURSE="devops"\
+      DURATION="25HOURS"\
+      IMAGE="LEO"
