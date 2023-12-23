@@ -1,9 +1,9 @@
 
 # Use an official AlmaLinux base image
-FROM almalinux:latest
+FROM almalinux:8
 
 # Install Nginx using dnf
-RUN dnf install -y nginx
+RUN yum install -y nginx
 
 # Remove the default Nginx index.html
 RUN rm -rf /usr/share/nginx/html/index.html
