@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -60,4 +59,4 @@ spec:
           service:
             name: app1
             port:
-              number: 81
+              number: 80
